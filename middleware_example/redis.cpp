@@ -1,5 +1,5 @@
 #include <iostream>
-#include <hiredis/hiredis.h>
+#include <hiredis.h>
 
 constexpr const char *REDIS_HOST = "127.0.0.1";
 constexpr const int REDIS_PORT = 6379;
@@ -16,8 +16,7 @@ int main()
         {
             std::cerr << "Connection error: " << context->errstr << std::endl;
             redisFree(context);
-        }
-        else
+        } else
         {
             std::cerr << "Connection error: can't allocate redis context" << std::endl;
         }
@@ -26,8 +25,8 @@ int main()
 
     // 设置密码
     const std::string password = REDIS_PASS; // 替换为你的 Redis 密码
-    redisReply *reply = (redisReply *)redisCommand(context, "AUTH %s", password.c_str());
-    if (reply == nullptr)
+    auto *authReply = (redisReply *) redisCommand(context, "AUTH %s", password.c_str());
+    if (authReply == nullptr)
     {
         std::cerr << "Error: " << context->errstr << std::endl;
         redisFree(context);
@@ -35,7 +34,7 @@ int main()
     }
 
     // 执行 SET 命令
-    redisReply *reply = (redisReply *)redisCommand(context, "SET %s %s", "key", "value");
+    auto *reply = (redisReply *) redisCommand(context, "SET %s %s", "key", "value");
     if (reply == nullptr)
     {
         std::cerr << "Error: " << context->errstr << std::endl;
@@ -46,7 +45,7 @@ int main()
     freeReplyObject(reply);
 
     // 执行 GET 命令
-    reply = (redisReply *)redisCommand(context, "GET %s", "key");
+    reply = (redisReply *) redisCommand(context, "GET %s", "key");
     if (reply == nullptr)
     {
         std::cerr << "Error: " << context->errstr << std::endl;

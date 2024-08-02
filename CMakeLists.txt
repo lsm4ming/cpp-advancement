@@ -9,6 +9,6 @@ add_subdirectory(template_example)
 add_subdirectory(middleware_example)
 
 # 定义可执行目标
-add_executable(cpp-advancement main.cpp)
-target_link_libraries(cpp-advancement gtest gtest_main)
-target_link_libraries(cpp-advancement Boost::system Boost::filesystem)
+add_executable(main main.cpp)
+target_link_libraries(main gtest gtest_main)
+target_link_libraries(main Boost::filesystem)
