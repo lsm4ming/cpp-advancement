@@ -19,15 +19,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(hiredis)
 
-# redis-plus-plus
-FetchContent_Declare(
-    redis-plus-plus
-    GIT_REPOSITORY https://github.com/sewenew/redis-plus-plus.git
-    GIT_TAG 1.3.12
-    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-)
-FetchContent_MakeAvailable(redis-plus-plus)
-
 # # 定义Boost的下载信息
 # FetchContent_Declare(
 # boost
