@@ -1,13 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 project(cpp-advancement)
 
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
-set(CMAKE_VISIBILITY_INLINES_HIDDEN ON)
-set(CMAKE_ENABLE_EXPORTS OFF)
+set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(third_party)
 
