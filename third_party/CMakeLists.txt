@@ -1,6 +1,6 @@
 include(FetchContent)
 
-# 下载gtest
+# gtest
 FetchContent_Declare(
     googletest
     GIT_REPOSITORY https://gitee.com/mirrors/googletest.git
@@ -9,6 +9,24 @@ FetchContent_Declare(
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+
+# hiredis
+FetchContent_Declare(
+    hiredis
+    GIT_REPOSITORY https://github.com/redis/hiredis.git
+    GIT_TAG v1.2.0
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+FetchContent_MakeAvailable(hiredis)
+
+# redis-plus-plus
+FetchContent_Declare(
+    redis-plus-plus
+    GIT_REPOSITORY https://github.com/sewenew/redis-plus-plus.git
+    GIT_TAG 1.3.12
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+FetchContent_MakeAvailable(redis-plus-plus)
 
 # # 定义Boost的下载信息
 # FetchContent_Declare(
