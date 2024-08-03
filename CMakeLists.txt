@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(third_party)
 add_subdirectory(template_example)
-add_subdirectory(middleware_example)
 
 # 定义可执行目标
 add_executable(main main.cpp)
