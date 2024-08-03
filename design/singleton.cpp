@@ -22,7 +22,6 @@ public:
 
 int main()
 {
-     std::cout << "开始执行" << std::endl;
     for (size_t i = 0; i < 10; i++)
     {
         SingletonTest &s1 = SingletonHelper<SingletonTest>::getInstance();
