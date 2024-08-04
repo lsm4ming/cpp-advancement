@@ -136,5 +136,17 @@
             "externalConsole": false,
             "MIMode": "gdb"
         },
+        {
+            "name": "vector_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/stl_example/vector_test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb"
+        },
     ]
 }

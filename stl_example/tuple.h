@@ -1,7 +1,5 @@
 #pragma once
 
-#include <vector>
-
 template <typename... Types>
 class Tuple;
 
@@ -42,13 +40,7 @@ class Tuple<>
 {
 };
 
-// 辅助函数用于创建元组实例
-template <typename... Args>
-Tuple<Args...> makeTuple(Args... args)
-{
-    return Tuple<Args...>(args...);
-}
-
+// std::get
 template <std::size_t Index, typename... Types>
 auto &get(Tuple<Types...> &tuple)
 {
