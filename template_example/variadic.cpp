@@ -7,7 +7,7 @@ void sayHello(T... args)
     std::cout << "参数数量=" << sizeof...(T) << std::endl;
 }
 
-void sayHello2() 
+void sayHello2()
 {
     // 递归终止
 }

@@ -1,0 +1,2 @@
+add_executable(memory_pool_test main.cpp memory_pool.cpp)
+target_link_libraries(memory_pool_test gtest gtest_main)

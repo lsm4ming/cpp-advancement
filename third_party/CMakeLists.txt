@@ -11,13 +11,13 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # hiredis
-FetchContent_Declare(
-    hiredis
-    GIT_REPOSITORY https://github.com/redis/hiredis.git
-    GIT_TAG v1.2.0
-    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-)
-FetchContent_MakeAvailable(hiredis)
+# FetchContent_Declare(
+#     hiredis
+#     GIT_REPOSITORY https://github.com/redis/hiredis.git
+#     GIT_TAG v1.2.0
+#     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+# )
+# FetchContent_MakeAvailable(hiredis)
 
 # boost
 # fetchcontent_declare(
