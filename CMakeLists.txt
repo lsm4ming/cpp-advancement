@@ -8,6 +8,9 @@ add_subdirectory(third_party)
 add_subdirectory(template_example)
 add_subdirectory(memory_pool)
 add_subdirectory(design)
+add_subdirectory(stl_example)
+add_subdirectory(objects)
+add_subdirectory(tests)
 
 # 定义可执行目标
 # add_executable(main main.cpp)
