@@ -11,6 +11,7 @@ add_subdirectory(design)
 add_subdirectory(stl_example)
 add_subdirectory(objects)
 add_subdirectory(tests)
+add_subdirectory(concurrency)
 
 # 定义可执行目标
 # add_executable(main main.cpp)
