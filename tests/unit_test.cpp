@@ -17,7 +17,7 @@ int UnitTest::run()
     getInstance().currentTest = nullptr;
     std::cout << "----------单元测试结束----------" << std::endl;
     std::cout << "----------total=" << getInstance().totalCount << "----------" << std::endl;
-    std::cout << "----------success=" << getInstance().sucessCount << "----------" << std::endl;
+    std::cout << "----------success=" << getInstance().successCount << "----------" << std::endl;
     std::cout << "----------fail=" << getInstance().failCount << "----------" << std::endl;
     return 0;
 }

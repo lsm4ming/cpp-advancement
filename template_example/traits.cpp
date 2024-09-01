@@ -3,25 +3,28 @@
 /**
  * 萃取实现
  */
-template <typename T>
+template<typename T>
 struct TypeTraits
 {
-    static const char *name() { return "Unknown"; }
+    static const char *name()
+    { return "Unknown"; }
 };
 
-template <>
+template<>
 struct TypeTraits<int>
 {
-    static const char *name() { return "int类型"; }
+    static const char *name()
+    { return "int类型"; }
 };
 
-template <>
+template<>
 struct TypeTraits<float>
 {
-    static const char *name() { return "float类型"; }
+    static const char *name()
+    { return "float类型"; }
 };
 
-template <typename T>
+template<typename T>
 void process(const T &value)
 {
     std::cout << TypeTraits<T>::name() << std::endl;
@@ -30,16 +33,18 @@ void process(const T &value)
 /**
  * 通过C++17提供的`if constexpr`和`std::is_same_v`更加简洁的实现
 */
-template <typename T>
+template<typename T>
 void traits_test(const T &arg)
 {
     if constexpr (std::is_same_v<T, int>)
     {
         std::cout << "int类型" << std::endl;
-    }
-    else if constexpr (std::is_same_v<T, float>)
+    } else if constexpr (std::is_same_v<T, float>)
     {
         std::cout << "float类型" << std::endl;
+    } else
+    {
+        std::cout << "Unknown" << std::endl;
     }
 };
 
@@ -51,5 +56,6 @@ int main()
 
     process(0);
     process(3.14f);
+    process("hello");
     return 0;
 }

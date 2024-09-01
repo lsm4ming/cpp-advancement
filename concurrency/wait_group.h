@@ -13,7 +13,7 @@ private:
 
 public:
     WaitGroup() = default;
-    WaitGroup(int count) : count_(count) {};
+    explicit WaitGroup(int count) : count_(count) {};
     WaitGroup(const WaitGroup &) = delete;
     WaitGroup(WaitGroup &&) = delete;
     ~WaitGroup() = default;

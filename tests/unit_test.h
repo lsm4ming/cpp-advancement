@@ -12,7 +12,7 @@ private:
 
 public:
     int totalCount{0};
-    int sucessCount{0};
+    int successCount{0};
     int failCount{0};
 
 private:
@@ -68,7 +68,7 @@ public:
     }                                             \
     else                                          \
     {                                             \
-        UnitTest::getInstance().sucessCount++;    \
+        UnitTest::getInstance().successCount++;    \
         std::cout << "Success" << std::endl;      \
     }
 
