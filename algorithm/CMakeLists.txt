@@ -1,0 +1,1 @@
+add_executable(algorithm-string_compression string_compression.cpp)

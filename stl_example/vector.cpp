@@ -6,7 +6,7 @@ int main()
     Vector<int> v;
     for (size_t i = 0; i < 100; i++)
     {
-        v.push_back(i);
+        v.push_back((int)i);
     }
     std::cout << v.size() << std::endl;
 
